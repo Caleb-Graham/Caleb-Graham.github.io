@@ -1,8 +1,55 @@
-body {
-	background:#98b398;
-	background: url("img/SoccerFieldBackground.png");
-	background-repeat: no-repeat;
-	background-size: 100%;
-	overflow:auto;
+html {
+    background-image: url("SoccerFieldBackground.png");
+     /* Full height */
+     height: 100%; 
 
+     /* Center and scale the image nicely */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+
+}
+
+ div.container > #ronaldo{
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    right: 500px;
+    bottom:0px;
+}
+
+div.container > #mbappe{
+    width: 150x;
+    height: 200px;
+    position: absolute;
+    left: 500px;
+    top: 420px;
+}
+
+div.container > #startButton{
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    left: 550px;
+    top: 0px;
+}
+
+
+div.container > #winRonaldo {
+    width: 150px;
+    height: 200px;
+    right: 500px;
+    top: 300px;
+    position: fixed;
+    visibility: hidden;
+}
+
+div.container > #winMbappe {
+    width: 150px;
+    height: 200px;
+    right: 600px; 
+    top: 300px;
+    position: fixed;
+    visibility: hidden;
 }
