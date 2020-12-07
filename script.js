@@ -1,67 +1,94 @@
-//Great Race script
-var pixels2 = 0;
-var pixels = 0;
 
 
+// Declaring variables for events
+let stopLight = document.getElementById('startButton');
+let mbappeRun = document.getElementById('mbappe'); // Mario == Mbappe
+let ronaldoRun = document.getElementById('ronaldo'); // Yoshi == Ronaldo
+let mbappeWin = document.getElementById('winMbappe');
+let ronaldoWin = document.getElementById('winRonaldo');
 
 
-var mbappeScoot = document.getElementById('mbappe');
-var ronaldoScoot = document.getElementById('ronaldo');
-var start = document.getElementById("startButton");
-start.addEventListener("click", startGame, false);
+// onlick event for starting race by clicking stopLight variable
+document.getElementById('startButton').addEventListener("click", startRace);
+ronaldoWin.addEventListener("click", restartRace);
+mbappeWin.addEventListener("click", restartRace);
 
-function startGame() {
-  start.src = "img/GreenLight.png";
-  start.height = "300";
+// function that runs the click event and swaps images and styles the racers to the left.
+function startRace() 
+{
 
-  function mbappeMove(){
-    // changing the css property function line of code? style = "marin-left ="'pixels';"
-    mbappeScoot.setAttribute ("style", "margin-left:" + pixels + "px;");
-    // make a random for each object to determine how many pixels each item will move possibly picking 1 - 10 px per cycle of timer
-    randomPixels2 = Math.ceil(Math.random()*75)
-    // make var to add to pixels
-    pixels2 = (pixels2 + randomPixels2);
-    // if statement to stop the race when a winner has been choosen
-    if (pixels2 > 850) {
-      stoptimer();
-      mbappeScoot.src = "/img/MbappeCelebration.jpg";
-      mbappeScoot.width ="300";
+stopLight = document.getElementById('startButton').src = "img/RedLight.png";
+mbappeRun = document.getElementById('mbappe').src = "img/Mbappe.png";
+ ronaldoRun = document.getElementById('ronaldo').src = "img/Ronaldo.png";
+ document.getElementById('mbappe').style.left = "0px";
+ document.getElementById('ronaldo').style.left = "0px";
+
+ var myTime = setInterval(takeOff, 10); 
+
+    function takeOff() 
+{
+
+    var rand = Math.round(Math.random() * 20);
+    var rand2 = Math.round(Math.random() * 20);
+    let mbappeRacer = document.getElementById('mbappe').style.left
+    let ronaldoRacer = document.getElementById('ronaldo').style.left
+
+    mbappeRacer = document.getElementById('mbappe').style.left = (parseInt(document.getElementById('mbappe').style.left) + rand) + "px";
+    ronaldoRacer = document.getElementById('ronaldo').style.left = (parseInt(document.getElementById('ronaldo').style.left) + rand2) + "px";
+
+
+//if statment to stop racer at finsh point
+    if (parseInt(mbappeRacer) >= 1400) {
+    myStop();
+    document.getElementById("ronaldo").style.visibility = "hidden";
+    document.getElementById('mbappe').style.visibility = "hidden";
+    document.getElementById("winMbappe").style.visibility = "visible";
+    return;
+
+    }   else if (parseInt(ronaldoRacer) >= 1400) 
+    {
+    myStop();
+    document.getElementById("ronaldo").style.visibility = "hidden";
+    document.getElementById('mbappe').style.visibility = "hidden";
+    document.getElementById('winRonaldo').style.visibility = "visible";
+
     }
-  }
 
+}
 
-  function ronaldoMove(){
-    ronaldoScoot.setAttribute ("style", "margin-left:" + pixels + "px;");
-    randomPixels = Math.ceil(Math.random()*75)
-    pixels = (pixels + randomPixels);
-    if (pixels > 850) {
-      stoptimer();
-      ronaldoScoot.src = "/img/RonaldoCelebration.jpg";
-      ronaldoScoot.width = "300";
-    }
-  }
-  // //make a timer
-  // for each object that will make imagesmove function go every 1 seconds
-    myTimer2 = setInterval(mbappeMove, 1000)
-    myTimer = setInterval(ronaldoMove, 1000)
+ronaldoWin.addEventListener("click", revealImages);
+mbappeWin.addEventListener("click", revealImages);
 
+// function that reveals images
+function revealImages()
+{
+document.getElementById("ronaldo").style.visibility = "visible";
+document.getElementById("mbappe").style.visibility = "visible";
+document.getElementById("winMbappe").style.visibility = "hidden";
+document.getElementById("winRonaldo").style.visibility = "hidden";
+document.getElementById('startButton').src = "img/RedLight.png";
 
-
-  function stoptimer(){
-    clearInterval(myTimer);
-    clearInterval(myTimer2);
-  }
 }
 
 
+// This stops the interval
+function myStop() 
+{
+clearInterval(myTime)
 
+}
 
+// this function will style the oriiginal back to the left and insert the running images. 
+document.getElementById('startButton').addEventListener("click", restartRace);
 
+}
+function restartRace()
+{
+document.getElementById('mbappe').src = "img/Mbappe.png";
+ document.getElementById('ronaldo').src = "img/Ronaldo.png";
+ document.getElementById('startButton').src = "img/RedLight.png";
+ document.getElementById('mbappe').style.left = "0px";
+ document.getElementById('ronaldo').style.left = "0px";
 
+}
 
-
-// diplay image for winner
-
-// if pixels at xpixels display winner image
-
-// make a stoplight that will make the race start
