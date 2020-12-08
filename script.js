@@ -21,7 +21,6 @@ mbappeRun = document.getElementById('mbappe').src = "img/Mbappe.png";
  ronaldoRun = document.getElementById('ronaldo').src = "img/Ronaldo.png";
  document.getElementById('mbappe').style.left = "0px";
  document.getElementById('ronaldo').style.left = "0px";
- document.getElementById("greenLight").style.visibility = "visible";
 
  var myTime = setInterval(takeOff, 10); 
 
