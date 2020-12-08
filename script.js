@@ -19,6 +19,8 @@ function startRace()
 
 //stopLight = document.getElementById('startButton').src = "img/RedLight.png";
 stopLight = document.getElementById('greenLight').src = "img/GreenLight.png";
+document.getElementById('startButton').style.visibility = "hidden";
+document.getElementById("GreenLight").style.visibility = "visible";
 mbappeRun = document.getElementById('mbappe').src = "img/Mbappe.png";
  ronaldoRun = document.getElementById('ronaldo').src = "img/Ronaldo.png";
  document.getElementById('mbappe').style.left = "0px";
@@ -67,7 +69,7 @@ document.getElementById("ronaldo").style.visibility = "visible";
 document.getElementById("mbappe").style.visibility = "visible";
 document.getElementById("winMbappe").style.visibility = "hidden";
 document.getElementById("winRonaldo").style.visibility = "hidden";
-document.getElementById('startButton').src = "img/RedLight.png";
+//document.getElementById('startButton').src = "img/RedLight.png";
 
 }
 
@@ -79,7 +81,7 @@ clearInterval(myTime)
 
 }
 
-// this function will style the oriiginal back to the left and insert the running images. 
+// this function will style the original back to the left and insert the running images. 
 document.getElementById('startButton').addEventListener("click", restartRace);
 
 }
