@@ -17,10 +17,8 @@ mbappeWin.addEventListener("click", restartRace);
 function startRace() 
 {
 
-//stopLight = document.getElementById('startButton').src = "img/RedLight.png";
-stopLight = document.getElementById('greenLight').src = "img/GreenLight.png";
-document.getElementById('startButton').style.visibility = "hidden";
-document.getElementById("GreenLight").style.visibility = "visible";
+stopLight = document.getElementById('startButton').src = "img/RedLight.png";
+document.getElementById('startButton').addEventListener("click", revealGreen);
 mbappeRun = document.getElementById('mbappe').src = "img/Mbappe.png";
  ronaldoRun = document.getElementById('ronaldo').src = "img/Ronaldo.png";
  document.getElementById('mbappe').style.left = "0px";
@@ -69,8 +67,14 @@ document.getElementById("ronaldo").style.visibility = "visible";
 document.getElementById("mbappe").style.visibility = "visible";
 document.getElementById("winMbappe").style.visibility = "hidden";
 document.getElementById("winRonaldo").style.visibility = "hidden";
-//document.getElementById('startButton').src = "img/RedLight.png";
+document.getElementById('startButton').src = "img/RedLight.png";
+}
 
+function revealGreen()
+{
+stopLight = document.getElementById('greenLight').src = "img/GreenLight.png";
+document.getElementById('startButton').style.visibility = "hidden";
+document.getElementById("GreenLight").style.visibility = "visible";
 }
 
 
