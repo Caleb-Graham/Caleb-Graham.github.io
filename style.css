@@ -1,13 +1,8 @@
-html {
-    background-image: url("img/SoccerFieldBackground.png");
-     /* Full height */
-     height: 100%; 
-
-     /* Center and scale the image nicely */
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-attachment: fixed;
+body {
+	background: url("img/SoccerFieldBackground.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow:auto;
 
 }
 
