@@ -17,7 +17,8 @@ mbappeWin.addEventListener("click", restartRace);
 function startRace() 
 {
 
-stopLight = document.getElementById('startButton').src = "img/RedLight.png";
+//stopLight = document.getElementById('startButton').src = "img/RedLight.png";
+stopLight = document.getElementById('greenLight').src = "img/GreenLight.png";
 mbappeRun = document.getElementById('mbappe').src = "img/Mbappe.png";
  ronaldoRun = document.getElementById('ronaldo').src = "img/Ronaldo.png";
  document.getElementById('mbappe').style.left = "0px";
