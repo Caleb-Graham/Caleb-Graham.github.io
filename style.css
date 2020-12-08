@@ -33,13 +33,6 @@ div.container > #startButton{
     top: 0px;
 }
 
-div.container > #greenLight{
-    width: 200px;
-    height: 200px;
-    position: fixed;
-    left: 550px;
-    top: 0px;
-}
 
 
 div.container > #winRonaldo {

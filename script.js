@@ -16,7 +16,6 @@ mbappeWin.addEventListener("click", restartRace);
 // function that runs the click event and swaps images and styles the racers to the left.
 function startRace() 
 {
-
 stopLight = document.getElementById('startButton').src = "img/RedLight.png";
 mbappeRun = document.getElementById('mbappe').src = "img/Mbappe.png";
  ronaldoRun = document.getElementById('ronaldo').src = "img/Ronaldo.png";
