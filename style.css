@@ -1,8 +1,10 @@
-html {
+body {
+	background:#98b398;
 	background: url("img/SoccerFieldBackground.png");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	overflow:auto;
+
 }
 
  div.container > #ronaldo{
@@ -11,6 +13,7 @@ html {
     position: absolute;
     left: 100px;
     bottom:0px;
+    float: left;
 }
 
 div.container > #mbappe{
@@ -19,6 +22,7 @@ div.container > #mbappe{
     position: absolute;
     left: 100px;
     top: 420px;
+    float: left;
 }
 
 div.container > #startButton{
