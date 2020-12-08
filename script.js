@@ -2,8 +2,8 @@
 
 // Declaring variables for events
 let stopLight = document.getElementById('startButton');
-let mbappeRun = document.getElementById('mbappe'); // Mario == Mbappe
-let ronaldoRun = document.getElementById('ronaldo'); // Yoshi == Ronaldo
+let mbappeRun = document.getElementById('mbappe');
+let ronaldoRun = document.getElementById('ronaldo'); 
 let mbappeWin = document.getElementById('winMbappe');
 let ronaldoWin = document.getElementById('winRonaldo');
 
